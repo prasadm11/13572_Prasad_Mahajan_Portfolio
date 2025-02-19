@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="/Icons/Screenshot (1).png">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="./Resources/Icons/Screenshot (1).png" alt="" srcset="" height="50px" width="50px"> Prasad Mahajan</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </div>
+    </nav>
+
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Hi,<br>
+                I'm <span id="name">Prasad Mahajan</span>, a passionate <span id="profession">Software Developer.</span>
+            </p>
+
+        </div>
+
+        <!-- <div class="home-image">
+            <img src="/Mini Project - Portfolio/Icons/profile-removebg-preview.png" alt="profile">
+        </div> -->
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <div class="about-photo">
+                <img src="./Resources/Icons/profile-round.jpg" alt="round-profile">
+            </div>
+            <div class="about-description">
+                <h2>About Me</h2>
+                <p>Hi, I'm Prasad Mahajan, a passionate Software Developer specializing in front-end and back-end
+                    technologies. I have experience with HTML, CSS, JavaScript, and .NET, and I enjoy working on
+                    projects
+                    that push my skills forward.</p>
+                <a href="./Resources/cv/PRASAD MAHAJAN UPDATED.pdf" class="btn-cv" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="project-container">
+            <h2 class="projects-heading">Projects</h2>
+            <div class="project-item">
+                <h3>AI Music Recommendation System</h3>
+                <p>Discover the future of music with my AI music recommendation system! Powered by Python, ML, and AI,
+                    this project analyzes user preferences, tracks listening patterns, and leverages advanced algorithms
+                    to deliver personalized music suggestions.</p>
+                <a href="https://github.com/prasadm11/AI-music-recommendation-system" class="project-link"
+                    target="_blank">View Project</a>
+            </div>
+            <div class="project-item">
+                <h3>Hydroponic Monitoring System</h3>
+                <p>A Raspberry Pi-powered system for monitoring and controlling a hydroponic setup. The system
+                    integrates sensors (ultrasonic for water level and pH sensor) and provides a REST API for remote
+                    access.</p>
+                <a href="https://github.com/prasadm11/Hydroponic-Monitoring-System" class="project-link"
+                    target="_blank">View Project</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="contact-heading">Get in Touch</h2>
+            <p class="contact-subheading">Have a question or want to collaborate? Feel free to reach out!</p>
+
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <footer class="contact-footer">
+                <p class="footer-text">Or connect with me on:</p>
+                <div class="contact-icons">
+                    <a href="mailto:pmmahajan2002@gmail.com" target="_blank" class="icon-link">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACVUlEQVR4nO2XPWgUQRTH5xLDIX7Ej31vFWwEtbHQykoIYmVhFWwtbW0tLW0tbSWoWCqpRIIWJkWQi7k3mxykUERQVARB981e8mQ2dyHiLnvr7d7tkvnDVDcz7/32fcw7pZycnJycxinURuq4lAPR448C7smIqIoKd/k4/aZbbxCvFUlzflPUnAwAIjKpqiaRyYMLXWk8km2IQUBQm7d+21xSFRG0+SJoXtoByAEiSLwJZB4c68jhsXivlPJbcgCJ7yFxN86UTBAyz1DzVjKQ+QhBODtqCAjCWWv7r5TvATQeixx6lVDs8cF1Gz6zkdbqQPNLT4fnygbw136fRs3zie12TqT5fEuOr0TZTQm0uYNkgkQY4l9AfPdMR5qFEyzLFJK5jZp/Jts2G0eWonzd9dQH2W8dBuIwJd3WkaKrRTFA21wGMqvJ2cAGNd+P6yXzmViWqSQDHoVnQfOLlGZga+rhiY7A/wJMv5Oj1knbWDAZ4rVPfL6/PxMEtCFPm5nUL0Z8AzR/TjH23aaEEpkYmECkAZpvAvGX1DsDc8vu230sz4jy1G8JFvH10jRMlDHPrAXEX4vI5zLqDgsfGhdkX1aH8Si61t/uB9EVJLM2bCfEwkEG6Pnbb495Ylfa7/asvWNQe1gWyA5QEF4Hbd6nO/xPLXyyxZ7XDpYNkjQXlTG/4ShA+oJVvgDEi2VM1DhKkFgiE/E7ofkbEv/ovTND/8fBkYP05Gk5aVdR9+G4QIoWOpCKCV1EKiZ0EamY0EWk7hHBmizlQPT4o4B7IiJOTk5Oqg76AyDLDdk6d+yXAAAAAElFTkSuQmCC"
+                            alt="email">
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/prasadmahajan21" target="_blank" class="icon-link">
+                        <img width="100" height="100" src="https://img.icons8.com/nolan/100/linkedin.png" alt="linkedin"/>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/prasadm11" target="_blank" class="icon-link">
+                        <img src="./Resources/Icons/icons8-github-48.png" alt="GitHub">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.instagram.com/prasadmahajanpm?igsh=b3RuZnA1eW55eHkw" target="_blank" class="icon-link">
+                        <img width="64" height="64" src="https://img.icons8.com/nolan/64/instagram-new.png" alt="instagram-new"/>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>
